@@ -25,7 +25,9 @@ export default function Post() {
       }
     }
 
-    fetchPost();
+    if (id) {
+      fetchPost();
+    }
   }, [id])
 
   return (
