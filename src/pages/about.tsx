@@ -1,7 +1,11 @@
 import React from "react";
+import Navbar from "../../components/Navbar";
 
-export default () => (
-  <div>
-    <h1>About</h1>
-  </div>
-);
+export default function About() {
+  return (
+    <>
+      <Navbar />
+      <h1>About</h1>
+    </>
+  )
+}
