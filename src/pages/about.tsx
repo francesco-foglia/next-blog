@@ -1,11 +1,12 @@
 import React from "react";
-import Navbar from '@/../components/Navbar'
+import BaseLayout from "@/../components/layout/BaseLayout";
 
 export default function About() {
   return (
     <>
-      <Navbar />
-      <h1>About</h1>
+      <BaseLayout>
+        <h1>About</h1>
+      </BaseLayout>
     </>
   )
 }
