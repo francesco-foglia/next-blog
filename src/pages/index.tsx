@@ -5,6 +5,7 @@ import PostList from "@/../components/PostList";
 interface Post {
   id: number;
   title: string;
+  body: string;
 }
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=10');
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=12');
         const posts = await response.json();
         setPosts(posts);
       } catch (err) {
