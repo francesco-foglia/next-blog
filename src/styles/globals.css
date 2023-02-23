@@ -9,6 +9,11 @@ ul {
   min-height: 230px;
 }
 
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+
 .card-body {
   display: flex;
   flex-direction: column;
