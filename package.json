@@ -16,7 +16,9 @@
     "bootstrap": "^5.2.3",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
+    "jquery": "^3.6.3",
     "next": "13.1.6",
+    "popper.js": "^1.16.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.5"
