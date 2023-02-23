@@ -13,7 +13,9 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      {children}
+      <div className="container-fluid">
+        {children}
+      </div>
     </>
   );
 }
