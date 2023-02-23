@@ -1,9 +1,12 @@
-import React from "react";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import Head from "next/head";
 import Navbar from "@/../components/Navbar";
 
-export default function BaseLayout({ children }: { children: ReactNode }) {
+interface BaseLayoutProps {
+  children: ReactNode;
+}
+
+export default function BaseLayout({ children }: BaseLayoutProps) {
   return (
     <>
       <Head>
@@ -13,9 +16,9 @@ export default function BaseLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <div className="container-fluid">
+      <main className="container-fluid">
         {children}
-      </div>
+      </main>
     </>
   );
 }
