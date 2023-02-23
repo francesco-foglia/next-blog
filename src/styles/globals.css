@@ -20,7 +20,14 @@ ul {
   justify-content: space-evenly;
 }
 
+h1,
 h2,
 p {
   text-transform: capitalize;
+}
+
+.post-detail-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }

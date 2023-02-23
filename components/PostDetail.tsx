@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 interface Post {
   id: number;
@@ -10,13 +11,16 @@ interface PostDetailProps {
   post: Post;
 }
 
-export default function PostDetail({ post }: PostDetailProps) {
+const PostDetail: React.FC<PostDetailProps> = ({ post }) => {
+  const capitalizeTitle = post.title[0].toUpperCase() + post.title.slice(1);
   return (
-    <div className="card mb-3">
-      <div className="card-body">
-        <h2 className="card-title h5">{post.title}</h2>
-        <p className="card-text">{post.body}</p>
-      </div>
+    <div className="container-fluid pb-5">
+      <h1 className="display-4 my-3">{post.title}</h1>
+      <p className="lead my-3">{post.body}</p>
+      <img src={`https://via.placeholder.com/1000x300?text=${capitalizeTitle}`} alt={post.title} className="post-detail-img my-3" />
+      <Link href="/" className="btn btn-secondary">Back to posts</Link>
     </div>
   );
-}
+};
+
+export default PostDetail;
