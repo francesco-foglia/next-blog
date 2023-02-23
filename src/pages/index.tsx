@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <>
       <BaseLayout>
-        <h1>Home</h1>
+        <h1 className="mb-4">Blog</h1>
         <PostList posts={posts} />
       </BaseLayout>
     </>

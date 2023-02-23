@@ -21,9 +21,6 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <Link href="/" className="nav-link active" aria-current="page">
-              Home
-            </Link>
             <Link href="/about" className="nav-link">
               About
             </Link>

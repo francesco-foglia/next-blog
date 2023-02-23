@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <BaseLayout>
-        <h1>About</h1>
+        <h1 className="mb-4">About</h1>
       </BaseLayout>
     </>
   )
