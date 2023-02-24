@@ -11,12 +11,12 @@ interface PostListProps {
   posts: Post[];
 }
 
-const PostList = ({ posts }: PostListProps) => (
-  <ul className="flex flex-row">
+const PostList: React.FC<PostListProps> = ({ posts }) => (
+  <ul className="flex flex-row flex-wrap">
     {posts && posts.map(post => (
       <PostPreview key={post.id} post={post} />
     ))}
-  </ul>
+  </ul >
 );
 
 export default PostList;

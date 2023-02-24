@@ -26,7 +26,7 @@ const Home = () => {
       } catch (err) {
         console.log(err);
       }
-    }
+    };
 
     fetchPosts();
   }, [page]);
@@ -36,25 +36,25 @@ const Home = () => {
   };
 
   return (
-    <>
-      <BaseLayout>
-        <h1 className="mb-4">Blog</h1>
-        <div className="flex justify-between">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            disabled={page === 1}
-            onClick={() => handlePageChange(page - 1)}>
-            Prev
-          </button>
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            onClick={() => handlePageChange(page + 1)}>
-            Next
-          </button>
-        </div>
-        {isLoading ? <Loading /> : <PostList posts={posts} />}
-      </BaseLayout>
-    </>
+    <BaseLayout>
+      <h1 className="mb-4 text-3xl font-bold">Blog</h1>
+      <div className="mb-4">
+        <button
+          className="bg-gray-300 hover:bg-gray-400 text-white font-bold py-2 px-4 mr-5 rounded"
+          disabled={page === 1}
+          onClick={() => handlePageChange(page - 1)}
+        >
+          Prev
+        </button>
+        <button
+          className="bg-gray-300 hover:bg-gray-400 text-white font-bold py-2 px-4 rounded"
+          onClick={() => handlePageChange(page + 1)}
+        >
+          Next
+        </button>
+      </div>
+      {isLoading ? <Loading /> : <PostList posts={posts} />}
+    </BaseLayout>
   );
 }
 
