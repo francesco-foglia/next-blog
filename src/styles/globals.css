@@ -6,18 +6,18 @@ ul {
 }
 
 .card {
-  min-height: 400px;
+  min-height: 500px;
 }
 
 .card-img-top {
-  height: 150px;
+  height: 200px;
   object-fit: cover;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 h1,
