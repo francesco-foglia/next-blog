@@ -17,17 +17,17 @@ export default function Post() {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-        const post = await response.json();
-        setPost(post);
+        if (id) {
+          const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+          const post = await response.json();
+          setPost(post);
+        }
       } catch (err) {
         console.log(err);
       }
     }
 
-    if (id) {
-      fetchPost();
-    }
+    fetchPost();
   }, [id])
 
   return (

@@ -8,7 +8,7 @@ interface Post {
   body: string;
 }
 
-export default function Home() {
+const Home = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Home() {
     }
 
     fetchPosts();
-  }, [])
+  }, []);
 
   return (
     <>
@@ -34,3 +34,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;

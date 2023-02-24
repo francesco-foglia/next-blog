@@ -20,7 +20,9 @@ const PostPreview: React.FC<PostPreviewProps> = ({ post }) => {
         <div className="card-body">
           <h2 className="card-title h5">{post.title}</h2>
           <p className="card-text">{post.body}</p>
-          <Link href={`/posts/${post.id}`} className="btn btn-secondary">Read more</Link>
+          <Link href={`/posts/${post.id}`}>
+            <button className="btn btn-secondary">Read more</button>
+          </Link>
         </div>
       </div>
     </li>
