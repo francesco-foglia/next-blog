@@ -16,7 +16,7 @@ export default function BaseLayout({ children }: BaseLayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main className="container-fluid">
+      <main className="container pt-4">
         {children}
       </main>
     </>
