@@ -12,7 +12,7 @@ interface PostListProps {
 }
 
 const PostList = ({ posts }: PostListProps) => (
-  <ul className="row">
+  <ul className="flex flex-row">
     {posts && posts.map(post => (
       <PostPreview key={post.id} post={post} />
     ))}

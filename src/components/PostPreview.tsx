@@ -14,14 +14,14 @@ interface PostPreviewProps {
 const PostPreview: React.FC<PostPreviewProps> = ({ post }) => {
   const firstWord = post.title[0].toUpperCase() + post.title.slice(1).split(' ')[0];
   return (
-    <li key={post.id} className="col-lg-6 col-xl-4 col-xxl-3">
-      <div className="card mb-3">
-        <img src={`https://via.placeholder.com/500?text=${firstWord}`} className="card-img-top" alt={post.title} />
-        <div className="card-body">
-          <h2 className="card-title h5">{post.title}</h2>
-          <p className="card-text">{post.body}</p>
+    <li key={post.id} className="lg:w-1/2 xl:w-1/3 xxl:w-1/4">
+      <div className="mb-3 bg-white rounded-lg shadow">
+        <img src={`https://via.placeholder.com/500?text=${firstWord}`} className="w-full" alt={post.title} />
+        <div className="px-6 py-4">
+          <h2 className="text-xl font-semibold text-gray-800">{post.title}</h2>
+          <p className="text-gray-700">{post.body}</p>
           <Link href={`/posts/${post.id}`}>
-            <button className="btn btn-secondary">Read more</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Read more</button>
           </Link>
         </div>
       </div>

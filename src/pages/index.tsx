@@ -39,15 +39,15 @@ const Home = () => {
     <>
       <BaseLayout>
         <h1 className="mb-4">Blog</h1>
-        <div className="buttons mb-3">
+        <div className="flex justify-between">
           <button
-            className="btn btn-secondary"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             disabled={page === 1}
             onClick={() => handlePageChange(page - 1)}>
             Prev
           </button>
           <button
-            className="btn btn-secondary mx-2"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             onClick={() => handlePageChange(page + 1)}>
             Next
           </button>
