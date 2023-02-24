@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${pageSize}&_page=${page}`);
+        const response = await fetch(`http://localhost:3000/api/posts?_start=${page - 1}&_limit=${pageSize}`);
         const posts = await response.json();
         setPosts(posts);
       } catch (err) {
