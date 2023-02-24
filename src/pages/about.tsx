@@ -1,5 +1,5 @@
 import React from "react";
-import BaseLayout from "@/../components/layout/BaseLayout";
+import BaseLayout from "src/components/layout/BaseLayout";
 
 const About = () => {
   return (

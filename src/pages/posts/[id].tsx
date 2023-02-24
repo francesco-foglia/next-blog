@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import BaseLayout from "components/layout/BaseLayout";
-import PostDetail from "components/PostDetail";
+import BaseLayout from "src/components/layout/BaseLayout";
+import PostDetail from "src/components/PostDetail";
 
 interface Post {
   id: number;

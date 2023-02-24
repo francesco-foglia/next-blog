@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import BaseLayout from "@/../components/layout/BaseLayout";
-import PostList from "@/../components/PostList";
+import BaseLayout from "@/../src/components/layout/BaseLayout";
+import PostList from "@/../src/components/PostList";
 
 interface Post {
   id: number;

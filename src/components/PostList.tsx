@@ -1,5 +1,5 @@
 import React from "react";
-import PostPreview from "@/../components/PostPreview";
+import PostPreview from "./PostPreview";
 
 interface Post {
   id: number;
