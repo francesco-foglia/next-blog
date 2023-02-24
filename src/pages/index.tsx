@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BaseLayout from "@/../src/components/layout/BaseLayout";
 import PostList from "@/../src/components/PostList";
+import Loading from "@/../src/components/Loading";
 
 interface Post {
   id: number;
@@ -11,14 +12,17 @@ interface Post {
 const Home = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [page, setPage] = useState<number>(1);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const pageSize = 12;
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
+        setIsLoading(true);
         const response = await fetch(`http://localhost:3000/api/posts?_start=${page - 1}&_limit=${pageSize}`);
         const posts = await response.json();
         setPosts(posts);
+        setIsLoading(false);
       } catch (err) {
         console.log(err);
       }
@@ -48,7 +52,7 @@ const Home = () => {
             Next
           </button>
         </div>
-        <PostList posts={posts} />
+        {isLoading ? <Loading /> : <PostList posts={posts} />}
       </BaseLayout>
     </>
   );
